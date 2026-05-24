@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TraductorWindow</class>
+ <widget class="QMainWindow" name="TraductorWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>850</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Traductor Multilingüe de Escritorio - UNEFA</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QMainWindow { background-color: #1e1e2e; }
+    QLabel { color: #cdd6f4; font-size: 13px; font-family: 'Segoe UI', sans-serif; }
+    QComboBox { 
+        background-color: #313244; 
+        color: #cdd6f4; 
+        border: 1px solid #45475a; 
+        border-radius: 6px; 
+        padding: 5px 10px;
+        font-family: 'Segoe UI';
+        min-width: 150px;
+    }
+    QComboBox::drop-down { border: 0px; }
+    QTextEdit { 
+        background-color: #181825; 
+        color: #cdd6f4; 
+        border: 1px solid #45475a; 
+        border-radius: 8px; 
+        padding: 10px; 
+        font-size: 15px;
+    }
+    QPushButton { 
+        background-color: #89b4fa; 
+        color: #11111b; 
+        border-radius: 8px; 
+        font-weight: bold; 
+        font-size: 14px;
+    }
+    QPushButton:hover { background-color: #b4befe; }
+    QPushButton:pressed { background-color: #74c7ec; }
+    QRadioButton { color: #cdd6f4; font-size: 13px; font-family: 'Segoe UI'; }
+    QRadioButton::indicator { width: 14px; height: 14px; }
+   </string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>15</number>
+    </property>
+    <property name="margin">
+     <number>20</number>
+    </property>
+    
+    <item>
+     <layout class="QHBoxLayout" name="layoutSelectores">
+      <item>
+       <widget class="QComboBox" name="comboOrigen">
+        <item><property name="text"><string>Detectar Idioma</string></property></item>
+        <item><property name="text"><string>Español</string></property></item>
+        <item><property name="text"><string>Inglés</string></property></item>
+        <item><property name="text"><string>Portugués</string></property></item>
+        <item><property name="text"><string>Francés</string></property></item>
+        <item><property name="text"><string>Italiano</string></property></item>
+       </widget>
+      </item>
+      
+      <item>
+       <widget class="QPushButton" name="btnInvertir">
+        <property name="minimumSize">
+         <size><width>40</width><height>35</height></size>
+        </property>
+        <property name="text">
+         <string>⇄</string>
+        </property>
+        <property name="toolTip">
+         <string>Intercambiar idiomas</string>
+        </property>
+       </widget>
+      </item>
+      
+      <item>
+       <widget class="QComboBox" name="comboDestino">
+        <item><property name="text"><string>Inglés</string></property></item>
+        <item><property name="text"><string>Español</string></property></item>
+        <item><property name="text"><string>Portugués</string></property></item>
+        <item><property name="text"><string>Francés</string></property></item>
+        <item><property name="text"><string>Italiano</string></property></item>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacerHeader">
+        <property name="orientation"><enum>Qt::Horizontal</enum></property>
+       </spacer>
+      </item>
+      
+      <item>
+       <widget class="QRadioButton" name="radioTradicional">
+        <property name="text"><string>Modo Botón</string></property>
+        <property name="checked"><bool>true</bool></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioTiempoReal">
+        <property name="text"><string>Tiempo Real</string></property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    
+    <item>
+     <layout class="QHBoxLayout" name="layoutPaneles">
+      <property name="spacing"><number>15</number></property>
+      <item>
+       <layout class="QVBoxLayout" name="columnaIzquierda">
+        <item>
+         <widget class="QTextEdit" name="txtOrigen">
+          <property name="placeholderText">
+           <string>Escribe el texto a traducir aquí...</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblContador">
+          <property name="text"><string>Caracteres: 0</string></property>
+          <property name="alignment"><set>Qt::AlignRight</set></property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      
+      <item>
+       <layout class="QVBoxLayout" name="columnaDerecha">
+        <item>
+         <widget class="QTextEdit" name="txtDestino">
+          <property name="readOnly"><bool>true</bool></property>
+          <property name="placeholderText">
+           <string>Traducción limpia...</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblEstado">
+          <property name="text"><string>Listo</string></property>
+          <property name="styleSheet"><string>color: #a6e3a1;</string></property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    
+    <item>
+     <layout class="QHBoxLayout" name="layoutAccionInferior">
+      <item>
+       <spacer name="horizontalSpacerBottom">
+        <property name="orientation"><enum>Qt::Horizontal</enum></property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnTraducir">
+        <property name="minimumSize">
+         <size><width>160</width><height>40</height></size>
+        </property>
+        <property name="text">
+         <string>Traducir</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

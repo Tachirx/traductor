@@ -1,0 +1,32 @@
+# Entornos virtuales de Python
+.venv/
+env/
+ENV/
+venv/
+venv.bak/
+bin/
+include/
+lib/
+share/
+pyvenv.cfg
+
+# Caché de compilación de Python
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de editores y sistema
+.vscode/
+.idea/
+.project
+.pydevproject
+Thumbs.db
+.DS_Store
+
+# Archivos temporales de ejecución
+*.log
+*.tmp
+
+# Bitácora técnica del proyecto (ignorar según especificaciones)
+bitacora_tecnica.md
