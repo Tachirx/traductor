@@ -1,6 +1,6 @@
 # Traductor Multilingüe de Escritorio - UNEFA
 
-Aplicación de escritorio nativa desarrollada con **PySide6** orientada a la comunicación global, que soporta traducción por procedimiento y en tiempo real con control estricto asíncrono y excelente interfaz visual (Tema oscuro/Premium).
+Aplicación de escritorio  desarrollada con **PySide6** orientada a la comunicación global, que soporta traducción por procedimiento y en tiempo real con control estricto asíncrono y interfaz visual.
 
 ## Requisitos Previos
 * Python 3.9 o superior instalado.
@@ -36,3 +36,12 @@ Aplicación de escritorio nativa desarrollada con **PySide6** orientada a la com
 * **Motor (`Motor/`)**: Integración con `deep-translator` mapeando códigos exactos de idioma y control estricto de excepciones de conectividad.
 * **Vista (`Vista/`)**: Interfaz premium con layouts simétricos, barra de herramientas interactiva y hoja de estilos QSS, conectada dinámicamente mediante `QUiLoader`.
 * **Controlador (`main.py`)**: Núcleo orquestador que inyecta dependencias e inicializa el bucle de la aplicación nativa.
+
+## Desarrolladores:
+* Tachiro Rivas
+* Iván Martínez
+* Miguel Rodríguez 
+* Hector Hernández 
+* Iliane Romero
+
+Aplicación de escritorio realizada para la materia de lenguajes de programación II, UNEFA - Núcleo Apure.
