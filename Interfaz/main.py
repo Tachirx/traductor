@@ -30,7 +30,7 @@ class AppWindow(QMainWindow):
         self.caja_destino = self.ui.txtDestino
         self.contador_caracteres = self.ui.lblContador 
 
-        # Módulo C: Filosofias de ejecucion
+        # Módulo C:  ejecucion
         self.radio_tradicional = self.ui.radioTradicional
         self.radio_tiempo_real = self.ui.radioTiempoReal 
         self.boton_traducir = self.ui.btnTraducir

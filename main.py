@@ -2,12 +2,12 @@ import sys
 from PySide6.QtWidgets import QApplication
 from PySide6.QtCore import QTimer
 
-# Módulos del Backend y Eventos
+# Backend y Eventos
 from Motor.motor_traduccion import MotorTraduccion
 from Eventos.concurrencia import HiloTraductor
 from Eventos.gestor_eventos import GestorEventos
 
-# Módulo Frontend del Compañero (Original)
+#  Frontend
 from Interfaz.main import AppWindow
 
 class ControladorTraductor:
@@ -16,7 +16,7 @@ class ControladorTraductor:
         self.gestor_eventos = GestorEventos()
         self.hilo_traductor = HiloTraductor(self.motor)
         
-        # Instanciar la Vista original del compañero
+        # Instanciar la Vista original 
         self.vista = AppWindow()
         self.modo_actual = "manual"
         
@@ -31,12 +31,12 @@ class ControladorTraductor:
         
         self.configurar_conexiones()
         
-        # Configuración inicial de la UI que no está en su archivo pero es necesaria para UX
+        
         self.vista.caja_destino.setReadOnly(True)
         self.vista.radio_tradicional.setChecked(True)
         self.vista.indicador_estado.setText("Listo")
         
-        # Temporizador para el texto parpadeante (Requisito de Iliane)
+        
         self.timer_parpadeo = QTimer()
         self.timer_parpadeo.setInterval(500)
         self.timer_parpadeo.timeout.connect(self.alternar_texto_parpadeo)
